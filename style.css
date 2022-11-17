@@ -8,15 +8,17 @@
   box-shadow: 0 0 10px gray;
   padding: 15px;
   border-radius: 10px;
-  display: inline-block;
+ 
   background-color: yellow;
 
-  position: relative;
+  position: absolute;
   left: 0;
-  top: 45px;
-  left: -100px;
+  top: 30px;
 
- /* display: none;*/
+  display: none;
+}
+.popover button:focus + .popover-content {
+  display: block;
 }
 .popover-content span {
   display: block;
