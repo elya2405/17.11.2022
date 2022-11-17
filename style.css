@@ -1,10 +1,11 @@
 * {
   box-sizing: border-box;
 }
-.popover {
+[data-popover] {
   position: relative;
 }
-.popover-content {
+[data-popover]::after {
+  content: attr(data-popover);
   box-shadow: 0 0 10px gray;
   padding: 15px;
   border-radius: 10px;
@@ -13,15 +14,12 @@
 
   position: absolute;
   left: 0;
-  top: 30px;
+  top: 35px;
 
   display: none;
 }
-.popover button:focus + .popover-content {
-  display: block;
-}
-.popover-content span {
-  display: block;
+[data-popover]::before {
+  content: " ";
   height: 10px;
   width: 20px;
   border-bottom: 10px solid yellow;
@@ -29,7 +27,13 @@
   border-right: 10px solid transparent;
 
   position: absolute;
-  top: -10px;
+  top: 15px;
+  left: 0;
+  display: none;
+}
+[data-popover]:focus::after,
+[data-popover]:focus::before {
+  display: block;
 }
 .example-1::before {
   content: "HELLO";
@@ -42,6 +46,8 @@
 }
 .example-2::after {
   content: "💖";
+
+  font-weight: 700;
 }
 .example-3::before {
   content: "(￣y▽￣)╭ Ohohoho.....";
