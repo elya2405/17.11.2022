@@ -8,7 +8,7 @@
   box-shadow: 0 0 10px gray;
   padding: 15px;
   border-radius: 10px;
- 
+
   background-color: yellow;
 
   position: absolute;
@@ -31,3 +31,23 @@
   position: absolute;
   top: -10px;
 }
+.example-1::before {
+  content: "HELLO";
+}
+.example-1::after {
+  content: "BYE";
+}
+.example-2::before {
+  content: "😂";
+}
+.example-2::after {
+  content: "💖";
+}
+.example-3::before {
+  content: "(￣y▽￣)╭ Ohohoho.....";
+}
+.example-3::after {
+  content: "END";
+}
+
+
